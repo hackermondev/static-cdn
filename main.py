@@ -34,6 +34,9 @@ def home_upload():
       print(e)
       return render_template('error.html',error="Internal Server Error")
 
+@app.route('/ping')
+def ping():
+  return "Pong!"
 
 try:
   app.run(host="0.0.0.0",port=3000)
